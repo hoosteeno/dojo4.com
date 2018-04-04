@@ -5,3 +5,20 @@ backend:
 	media_folder: "public/media" # Media files will be stored in the repo under static/images/uploads
 	public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
 
+
+collections:
+  - name: "content"
+    label: "Content"
+    folder: "data/content"
+    fields:
+      - {label: "Type", name: "_type"}
+
+  - name: "posts"
+    label: "Post"
+    folder: "data/content"
+    filter:
+      field: _type
+      value: post
+    fields:
+      - {label: "Type", name: "_type", default: "post"}
+
