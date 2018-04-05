@@ -13,7 +13,7 @@ collections:
   - name: "posts"
     label: "Post"
     folder: "data/posts"
-		new: true
+		create: true
     filter:
       field: _type
       value: post
