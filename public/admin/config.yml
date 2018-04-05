@@ -13,9 +13,9 @@ collections:
     label: "Post"
     folder: "data/posts"
     create: true
-    filter:
-      field: _type
-      value: post
+    #filter:
+      #field: _type
+      #value: post
     fields:
-      - {label: "Type", name: "_type", default: "post"}
+      - {label: "Body", name: "body", default: "write some _markdown_ *yo*!"}
 
