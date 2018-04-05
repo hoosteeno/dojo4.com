@@ -43,7 +43,7 @@
       folder: "data/posts"
       create: true
       slug: "{{slug}}"
-			format: yaml
+      format: yaml
       fields:
         -
           <<: *title_field
@@ -60,7 +60,7 @@
       folder: "data/people"
       create: true
       slug: "{{slug}}"
-			format: yaml
+      format: yaml
       fields:
         -
           <<: *title_field
