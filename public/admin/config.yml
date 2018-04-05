@@ -4,7 +4,8 @@ public_folder: "/media" # The src attribute for uploaded media will begin with /
 publish_mode: editorial_workflow
 
 backend:
-  name: git-gateway
+  name: github
+  repo: dojo4/dojo4.com
   branch: master # Branch to update (optional; defaults to master)
 
 
