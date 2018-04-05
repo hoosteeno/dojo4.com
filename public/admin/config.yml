@@ -1,24 +1,72 @@
-media_folder: "public/media" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
+#
+  backend:
+    name: git-gateway
+    branch: master
 
-publish_mode: editorial_workflow
+  publish_mode: editorial_workflow
 
-backend:
-  name: github
-  repo: dojo4/dojo4.com
-  branch: master # Branch to update (optional; defaults to master)
+  media_folder: "public/media"
+  public_folder: "/media"
 
+#
+  og_field: &og_field
+    label: "Open Graph"
+    name: og
+    widget: object
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
 
-collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown", default: "write some _markdown_ *yo*!"}
+  title_field: &title_field
+    label: "Title"
+    name: title
+    widget: string
+
+  body_field: &body_field
+    label: "Body"
+    name: body
+    widget: markdown
+    default: "- this\n- is\n- _markdown_\n\n\nref: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+    required: false
+
+  published_at_field: &published_at_field
+    label: "Published At"
+    name: published_at 
+    widget: markdown
+
+#
+  collections:
+    - name: "posts"
+      label: "Posts"
+      label_singular: "Post"
+      folder: "data/posts"
+      create: true
+      slug: "{{slug}}"
+			format: yaml
+      fields:
+        -
+          <<: *title_field
+        -
+          <<: *body_field
+        -
+          <<: *published_at_field
+        -
+          <<: *og_field
+
+    - name: "people"
+      label: "People"
+      label_singular: "Person"
+      folder: "data/people"
+      create: true
+      slug: "{{slug}}"
+			format: yaml
+      fields:
+        -
+          <<: *title_field
+        -
+          <<: *body_field
+        -
+          <<: *published_at_field
+        -
+          <<: *og_field
