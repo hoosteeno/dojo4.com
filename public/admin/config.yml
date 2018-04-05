@@ -33,7 +33,7 @@
   published_at_field: &published_at_field
     label: "Published At"
     name: published_at 
-    widget: markdown
+    widget: datetime
 
 #
   collections:
