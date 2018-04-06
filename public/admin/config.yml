@@ -9,31 +9,32 @@
   public_folder: "/media"
 
 #
-  og_field: &og_field
-    label: "Open Graph"
-    name: og
-    widget: object
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: false}
-      - {label: "Description", name: "description", widget: "string", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-
   title_field: &title_field
     label: "Title"
     name: title
     widget: string
+    required: true
 
   body_field: &body_field
     label: "Body"
     name: body
     widget: markdown
     default: "- this\n- is\n- _markdown_\n\n\nref: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
-    required: false
 
   published_at_field: &published_at_field
     label: "Published At"
     name: published_at 
     widget: datetime
+
+  og_field: &og_field
+    label: "Open Graph"
+    name: og
+    widget: object
+    required: false
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
 
 #
   collections:
@@ -47,6 +48,14 @@
       fields:
         -
           <<: *title_field
+        -
+          label: "Author"
+          name: author
+          widget: relation
+          collection: people
+          searchFields: ["title", "email"]
+          valueField: email
+          
         -
           <<: *body_field
         -
@@ -64,6 +73,10 @@
       fields:
         -
           <<: *title_field
+        -
+          label: "Email"
+          name: email
+          widget: string
         -
           <<: *body_field
         -
