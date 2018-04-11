@@ -14,5 +14,12 @@ module Dojo4Com
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    require "#{ Rails.root }/lib/current.rb"
+    require "#{ Rails.root }/lib/lorem.rb"
+    require "#{ Rails.root }/lib/settings.rb"
+    require "#{ Rails.root }/lib/slug.rb"
+    require "#{ Rails.root }/lib/site.rb"
+    require "#{ Rails.root }/lib/site/model.rb"
   end
 end

@@ -5,6 +5,16 @@ source 'https://rubygems.org'
 #
 gem 'rails_build'
 
+gem 'dato'
+gem 'deep_dup'
+
+gem "stringex"
+gem "map"
+gem "fattr"
+gem "sekrets"
+gem "tagz"
+
+
 
 ### all the rails' shit is below this
 #
