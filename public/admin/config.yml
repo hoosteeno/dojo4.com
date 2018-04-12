@@ -1,7 +1,7 @@
 #
   backend:
-    #name: git-gateway
-    name: git
+    name: git-gateway
+    #name: git
     branch: master
 
   publish_mode: editorial_workflow
