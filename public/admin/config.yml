@@ -6,8 +6,8 @@
 
   publish_mode: editorial_workflow
 
-  media_folder: "data/media"
-  public_folder: "../media"
+  media_folder: "public/media"
+  public_folder: "/media"
 
 #
   title_field: &title_field

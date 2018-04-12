@@ -14,6 +14,8 @@ gem "fattr"
 gem "sekrets"
 gem "tagz"
 
+#gem "github-pages", group: :jekyll_plugins
+gem "jekyll"
 
 
 ### all the rails' shit is below this
