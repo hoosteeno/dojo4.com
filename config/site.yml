@@ -1,0 +1,16 @@
+---
+identifier: dojo4
+title: DOJO4
+slug: dojo4
+name: Dojo4 
+description: dojo4.com 
+keywords:
+- dojo4
+author: DOJO4
+development:
+  url: http://localhost:3000
+staging:
+  #url: http://clickclean-i18n.bitballoon.com
+  url: http://1234.netlify.com
+production:
+  url: http://dojo4.com

@@ -1,0 +1,16 @@
+---
+
+- config
+- content modeling
+- git large files
+
+
+- dato
+read_write: e1a2de951a6f31a50ac57383b7b49e
+read: 195816a5c22faca2d06490ae3e984e
+  - https://www.datocms.com/docs/import/ruby/
+  - import all people
+  - import all posts
+  - https://dojo4-com.admin.datocms.com/
+
+- https://lunrjs.com/ for search

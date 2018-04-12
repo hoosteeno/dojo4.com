@@ -1,0 +1,1 @@
+Current = Map.new
