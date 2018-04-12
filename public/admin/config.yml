@@ -16,6 +16,12 @@
     widget: string
     required: true
 
+  name_field: &name_field
+    label: "Name"
+    name: name
+    widget: string
+    required: true
+
   body_field: &body_field
     label: "Body"
     name: body
@@ -45,7 +51,7 @@
       folder: "data/posts"
       create: true
       slug: "{{slug}}"
-      format: yaml
+      format: yaml-frontmatter
       fields:
         -
           <<: *title_field
@@ -70,7 +76,7 @@
       folder: "data/people"
       create: true
       slug: "{{slug}}"
-      format: yaml
+      format: yaml-frontmatter
       fields:
         -
           <<: *title_field
