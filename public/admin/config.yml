@@ -6,7 +6,7 @@
 
   publish_mode: editorial_workflow
 
-  media_folder: "public/media"
+  media_folder: "data/media"
   public_folder: "../media"
 
 #
