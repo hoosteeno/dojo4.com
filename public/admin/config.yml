@@ -7,7 +7,7 @@
   publish_mode: editorial_workflow
 
   media_folder: "public/media"
-  public_folder: "/media"
+  public_folder: "https://raw.githubusercontent.com/dojo4/dojo4.com/master/public/media/"
 
 #
   title_field: &title_field
