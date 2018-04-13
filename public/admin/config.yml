@@ -7,7 +7,8 @@
   publish_mode: editorial_workflow
 
   media_folder: "public/media"
-  public_folder: "https://raw.githubusercontent.com/dojo4/dojo4.com/master/public/media/"
+  #public_folder: "https://raw.githubusercontent.com/dojo4/dojo4.com/master/public/media/" # this is the *source for imgix!
+  public_folder: http://dojo4.imgix.net/media/ # this gets written into the markdown for all images as the prefix/cdn to pull them through
 
 #
   title_field: &title_field
